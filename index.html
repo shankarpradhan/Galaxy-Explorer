@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Explorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: white;
+        }
+        
+        #canvas-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+        
+        h1 {
+            margin-bottom: 10px;
+            color: #4fc3f7;
+        }
+        
+        .info-panel {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 300px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #4fc3f7;
+            z-index: 100;
+        }
+        
+        .info-panel h2 {
+            color: #4fc3f7;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            background: #1a237e;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #4fc3f7;
+        }
+        
+        .controls {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div id="ui">
+        <h1>Galaxy Explorer</h1>
+        <p>Explore our Milky Way galaxy in 3D</p>
+        <div class="controls">
+            <button id="toggle-info">Show Information</button>
+            <button id="reset-view">Reset View</button>
+        </div>
+    </div>
+    
+    <div id="info-panel" class="info-panel">
+        <h2 id="info-title">Milky Way Galaxy</h2>
+        <p id="info-content">The Milky Way is a barred spiral galaxy containing our solar system...</p>
+        <button id="close-info">Close</button>
+    </div>
+
+    <!-- Three.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="galaxy.js"></script>
+</body>
+</html>
