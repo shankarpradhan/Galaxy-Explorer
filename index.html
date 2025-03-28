@@ -3,80 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Explorer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <title>Interactive 3D milkway Galaxy | Qveto Technologies</title>
+  <meta name="description" content="Explore our interactive 3D solar system visualization. A demo project by Qveto Technologies showcasing AI-powered software development capabilities.">
+  <meta name="keywords" content="3D solar system, interactive space visualization, Qveto, Qveto Technologies, Three.js demo, WebGL visualization">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://qveto.in/solar-system">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Interactive 3D Solar System | Qveto Technologies">
+  <meta property="og:description" content="Explore our interactive 3D solar system visualization. A demo project by Qveto Technologies showcasing AI-powered software development capabilities.">
+  <meta property="og:image" content="https://qveto.in/assets/images/banner/solar-system-demo.webp">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="qveto.in">
+  <meta property="twitter:url" content="https://qveto.in/solar-system">
+  <meta name="twitter:title" content="Interactive 3D Solar System | Qveto Technologies">
+  <meta name="twitter:description" content="Explore our interactive 3D solar system visualization. A demo project by Qveto Technologies showcasing AI-powered software development capabilities.">
+  <meta name="twitter:image" content="https://qveto.in/assets/images/banner/solar-system-demo.webp">
+  
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <!-- Developer Credit -->
+  <meta name="author" content="Shankar Pradhan, Shakti Prasad Nahark">
+  <link rel="author" href="https://shan.in.net">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Interactive 3D galaxy explorer",
+      "description": "Interactive visualization of our solar system using Three.js",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://qveto.in/solar-system"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Qveto Technologies",
+        "url": "https://qveto.in"
+      },
+      "developer": [
+        {
+          "@type": "Person",
+          "name": "Shankar Pradhan",
+          "url": "https://shan.in.net"
+        },
+        {
+          "@type": "Person",
+          "name": "Shakti Prasad Nahark",
+          "url": "https://qveto.in/team"
         }
-        
-        body {
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: white;
-        }
-        
-        #canvas-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        
-        #ui {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 300px;
-        }
-        
-        h1 {
-            margin-bottom: 10px;
-            color: #4fc3f7;
-        }
-        
-        .info-panel {
-            display: none;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            width: 300px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #4fc3f7;
-            z-index: 100;
-        }
-        
-        .info-panel h2 {
-            color: #4fc3f7;
-            margin-bottom: 10px;
-        }
-        
-        button {
-            background: #1a237e;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            margin: 5px 0;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        button:hover {
-            background: #4fc3f7;
-        }
-        
-        .controls {
-            margin-top: 15px;
-        }
-    </style>
+      ]
+    }
+  </script>
+    
 </head>
 <body>
     <div id="canvas-container"></div>
@@ -101,6 +84,6 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
     
     <!-- Main JavaScript -->
-    <script src="galaxy.js"></script>
+    <script src="./js/galaxy.js"></script>
 </body>
 </html>
